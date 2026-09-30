@@ -1,0 +1,11 @@
+# ================== 新增：Aria2 qBittorrent 精准直连规则 ==================
+  - AND,((IP-CIDR,192.168.5.159/32,no-resolve),(DST-PORT,6888)),DIRECT # 外部连接本机 aria2，6888 BT 端口直连
+  - AND,((IP-CIDR,192.168.5.159/32,no-resolve),(DST-PORT,15482)),DIRECT # 外部连接本机 qBittorrent，15482BT 端口直连
+  - AND,((SRC-IP-CIDR,192.168.5.159/32),(NETWORK,UDP)),DIRECT # 本机发出的 UDP 流量(DHT/Tracker)直连
+# ==================================================================
+# =========IPTV======================================
+  - DOMAIN-SUFFIX,852851.xyz,美国-手动
+  - DOMAIN-SUFFIX,4gtv.tv,台湾-手动
+  - DOMAIN-SUFFIX,api2.4gtv.tv,台湾-手动
+  - DOMAIN-SUFFIX,ofiii.com,台湾-手动
+# =========================================================
